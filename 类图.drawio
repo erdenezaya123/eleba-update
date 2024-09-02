@@ -1,0 +1,93 @@
+<mxfile host="diagram-viewer.giteeusercontent.com" modified="2024-09-02T13:11:04.474Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 SLBrowser/9.0.3.5211 SLBChan/105" version="${version}" etag="JT50HyfisQcSOzwLOxqZ">
+  <diagram id="0" name="第 1 页">
+    <mxGraphModel dx="1073" dy="617" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="用户" 用户="" id="zL2m8-kB66aU1NoK1Y7--2">
+          <mxCell style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+            <mxGeometry x="130" y="332" width="160" height="110" as="geometry">
+              <mxRectangle x="160" y="200" width="100" height="30" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="+ ID&#xa;+ 姓名&#xa;+ 联系方式&#xa;+ 配送地址&#xa;+ 支付方式" ID="+" 姓名="" id="zL2m8-kB66aU1NoK1Y7--3">
+          <mxCell style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zL2m8-kB66aU1NoK1Y7--2">
+            <mxGeometry y="26" width="160" height="84" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--11" value="订单" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="280" width="140" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--12" value="+ 订单ID&#xa;+ 顾客ID&#xa;+ 餐厅ID&#xa;+ 配送员ID&#xa;+ 订单状态&#xa;+ 总金额&#xa;+ 下单时间&#xa;+ 配送时间" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zL2m8-kB66aU1NoK1Y7--11">
+          <mxGeometry y="26" width="140" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--32" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="342" as="sourcePoint" />
+            <mxPoint x="390" y="342" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="342" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--34" value="1..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" connectable="0" vertex="1" parent="1">
+          <mxGeometry x="320" y="316" as="geometry" />
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--37" value="餐厅" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="70" width="140" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--38" value="+ 餐厅ID&#xa;+ 名称&#xa;+ 地址&#xa;+ 联系电话&#xa;+ 菜单列表&#xa;+ 营业时间" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zL2m8-kB66aU1NoK1Y7--37">
+          <mxGeometry y="26" width="140" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--40" value="" style="endArrow=none;html=1;rounded=0;exitX=0.407;exitY=0.994;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="zL2m8-kB66aU1NoK1Y7--38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="230" as="sourcePoint" />
+            <mxPoint x="447" y="280" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--41" value="1..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;rotation=90;" connectable="0" vertex="1" parent="1">
+          <mxGeometry x="470" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--42" value="配送员" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="530" width="140" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--43" value="+ 配送员ID&#xa;+ 姓名&#xa;+ 联系方式&#xa;+ 车辆信息" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zL2m8-kB66aU1NoK1Y7--42">
+          <mxGeometry y="26" width="140" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--45" value="" style="endArrow=none;html=1;rounded=0;exitX=0.407;exitY=0.994;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="456.98" y="449.9960000000001" as="sourcePoint" />
+            <mxPoint x="457" y="530.62" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--46" value="1..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;rotation=-90;" connectable="0" vertex="1" parent="1">
+          <mxGeometry x="430" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--47" value="订单" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="295" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--48" value="+ 评价ID&#xa;+ 订单ID&#xa;+ 顾客ID&#xa;+ 餐厅ID&#xa;+ 评分&#xa;+ 评论内容&#xa;+ 评价时间" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="zL2m8-kB66aU1NoK1Y7--47">
+          <mxGeometry y="26" width="140" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--49" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="340" as="sourcePoint" />
+            <mxPoint x="630" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="590" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--52" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;rotation=0;" connectable="0" vertex="1" parent="1">
+          <mxGeometry x="579" y="337" as="geometry" />
+        </mxCell>
+        <mxCell id="zL2m8-kB66aU1NoK1Y7--53" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;rotation=0;" connectable="0" vertex="1" parent="1">
+          <mxGeometry x="589" y="347" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
