@@ -3,6 +3,8 @@
 
 		<!-- header部分 -->
 		<header>
+			<div class="fa fa-angle-left" @click="goback()"></div>
+
 			<p>在线支付</p>
 		</header>
 
@@ -39,7 +41,7 @@
 			</li>
 		</ul>
 		<div class="payment-button">
-			<button>确认支付</button>
+			<button@click="toSuccess()">确认支付</button>
 		</div>
 
 		<!-- 底部菜单部分 -->
@@ -52,39 +54,50 @@
 
 	export default {
 		name: 'Payment',
-		data(){
+		data() {
 			return {
-				orderId:this.$route.query.orderId,
-				orders:{
-					business:{}
+				orderId: this.$route.query.orderId,
+				orders: {
+					business: {}
 				},
-				isShowDetailet:false
+				isShowDetailet: false
 			}
 		},
 		created() {
-			this.$axios.post('OrdersController/getOrdersById',this.$qs.stringify({
-				orderId:this.orderId
-			})).then(response=>{
+			this.$axios.post('OrdersController/getOrdersById', this.$qs.stringify({
+				orderId: this.orderId
+			})).then(response => {
 				this.orders = response.data;
-			}).catch(error=>{
+			}).catch(error => {
 				console.error(error);
 			});
 		},
 		mounted() {
 			//这里的代码是实现：一旦路由到在线支付组件，就不能回到订单确认组件。
 			//先将当前url添加到history对象中
-			history.pushState(null,null,document.URL);
+			history.pushState(null, null, document.URL);
 			//popstate事件能够监听history对象的变化
 			window.onpopstate = () => {
-				this.$router.push({path:'/index'});
+				this.$router.push({
+					path: '/index'
+				});
 			}
 		},
 		destroyed() {
 			window.onpopstate = null;
 		},
-		methods:{
-			detailetShow(){
+		methods: {
+			goback() {
+				this.$router.go(-1);
+			},
+			detailetShow() {
 				this.isShowDetailet = !this.isShowDetailet;
+			},
+			toSuccess() {
+					alert('支付成功！');
+					this.$router.push({
+					path: '/index',
+					});
 			}
 		},
 		components: {
@@ -116,6 +129,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.wrapper header .fa-angle-left {
+		margin: 0% 80% 0 0;
+		position: absolute;
 	}
 
 	/****************** 订单信息部分 ******************/

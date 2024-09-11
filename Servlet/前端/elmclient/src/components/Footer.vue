@@ -1,71 +1,87 @@
-<template>
-	<ul class="footer">
-		<li @click="toIndex">
-			<i class="fa fa-home"></i>
-			<p>首页</p>
-		</li>
-		<li>
-			<i class="fa fa-compass"></i>
-			<p>发现</p>
-		</li>
-		<li @click="toOrderList">
-			<i class="fa fa-file-text-o"></i>
-			<p>订单</p>
-		</li>
-		<li>
-			<i class="fa fa-user-o"></i>
-			<p>我的</p>
-		</li>
-	</ul>
-</template>
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Index from '../views/Index.vue'
+import BusinessList from '../views/BusinessList.vue'
+import BusinessInfo from '../views/BusinessInfo.vue'
+import Login from '../views/Login.vue'
+import Orders from '../views/Orders.vue'
+import UserAddress from '../views/UserAddress.vue'
+import Payment from '../views/Payment.vue'
+import OrderList from '../views/OrderList.vue'
+import AddUserAddress from '../views/AddUserAddress.vue'
+import EditUserAddress from '../views/EditUserAddress.vue'
+import Register from '../views/Register.vue'
+import MyInfo from '../views/MyInfo.vue'
 
-<script>
-	export default{
-		name:'Footer',
-		methods:{
-			toIndex(){
-				this.$router.push({path:'/index'});
-			},
-			toOrderList(){
-				this.$router.push({path:'/orderList'});
-			}
-		}
+Vue.use(VueRouter)
+
+const routes = [{
+		path: '/',
+		name: 'Home',
+		component: Index
+	}, {
+		path: '/index',
+		name: 'Index',
+		component: Index
+	}, {
+		path: '/businessList',
+		name: 'BusinessList',
+		component: BusinessList
+	}, {
+		path: '/businessInfo',
+		name: 'BusinessInfo',
+		component: BusinessInfo
+	}, {
+		path: '/login',
+		name: 'Login',
+		component: Login
+	}, {
+		path: '/orders',
+		name: 'Orders',
+		component: Orders
+	}, {
+		path: '/userAddress',
+		name: 'UserAddress',
+		component: UserAddress
+	}, {
+		path: '/payment',
+		name: 'Payment',
+		component: Payment
+	}, {
+		path: '/orderList',
+		name: 'OrderList',
+		component: OrderList
+	}, {
+		path: '/addUserAddress',
+		name: 'AddUserAddress',
+		component: AddUserAddress
+	}, {
+		path: '/editUserAddress',
+		name: 'EditUserAddress',
+		component: EditUserAddress
+	}, {
+		path: '/register',
+		name: 'Register',
+		component: Register
+	},{
+		path: '/myinfo',
+		name: 'MyInfo',
+		component: MyInfo
 	}
-</script>
+	
 
-<style>
-	.wrapper .footer {
-		width: 100%;
-		height: 14vw;
-		border-top: solid 1px #DDD;
-		background-color: #fff;
+]
 
-		position: fixed;
-		left: 0;
-		bottom: 0;
+//解决重复路由报异常问题
+const originalPush = VueRouter.prototype.push;
+VueRouter.prototype.push = function push(location) {
+	return originalPush.call(this, location).catch(err => err)
+}
 
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-	}
+const router = new VueRouter({
+	mode: 'history',
+	base: process.env.BASE_URL,
+	routes
+})
 
-	.wrapper .footer li {
-		/*li本身的尺寸完全由内容撑起*/
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-
-		color: #999;
-		user-select: none;
-		cursor: pointer;
-	}
-
-	.wrapper .footer li p {
-		font-size: 2.8vw;
-	}
-
-	.wrapper .footer li i {
-		font-size: 5vw;
-	}
-</style>
+export default router

@@ -3,7 +3,10 @@
 
 		<!-- header部分 -->
 		<header>
+			<div class="fa fa-angle-left" @click="goback()"></div>
+				
 			<p>商家列表</p>
+			
 		</header>
 
 		<!-- 商家列表部分 -->
@@ -29,57 +32,65 @@
 
 <script>
 	import Footer from '../components/Footer.vue';
-	
-	export default{
-		name:'BusinessList',
-		data(){
+
+	export default {
+		name: 'BusinessList',
+		data() {
 			return {
 				orderTypeId: this.$route.query.orderTypeId,
-				businessArr:[],
-				user:{}
+				businessArr: [],
+				user: {}
 			}
 		},
 		created() {
 			this.user = this.$getSessionStorage('user');
-			
+
 			//根据orderTypeId查询商家信息
-			this.$axios.post('BusinessController/listBusinessByOrderTypeId',this.$qs.stringify({
-				orderTypeId:this.orderTypeId
-			})).then(response=>{
+			this.$axios.post('BusinessController/listBusinessByOrderTypeId', this.$qs.stringify({
+				orderTypeId: this.orderTypeId
+			})).then(response => {
 				this.businessArr = response.data;
 				//判断是否登录
-				if(this.user!=null){
+				if (this.user != null) {
 					this.listCart();
 				}
-			}).catch(error=>{
+			}).catch(error => {
 				console.error(error);
 			});
 		},
-		components:{
+		components: {
 			Footer
 		},
-		methods:{
-			listCart(){
-				this.$axios.post('CartController/listCart',this.$qs.stringify({
-					userId:this.user.userId
-				})).then(response=>{
+		methods: {
+			listCart() {
+				this.$axios.post('CartController/listCart', this.$qs.stringify({
+					userId: this.user.userId
+				})).then(response => {
 					let cartArr = response.data;
 					//遍历所有食品列表
-					for(let businessItem of this.businessArr){
+					for (let businessItem of this.businessArr) {
 						businessItem.quantity = 0;
-						for(let cartItem of cartArr){
-							if(cartItem.businessId==businessItem.businessId){
+						for (let cartItem of cartArr) {
+							if (cartItem.businessId == businessItem.businessId) {
 								businessItem.quantity += cartItem.quantity;
 							}
 						}
 					}
 					this.businessArr.sort();
-				}).catch(error=>{
+				}).catch(error => {
 					console.error(error);
 				});
 			},
-			toBusinessInfo(businessId){
-				this.$router.push({path:'/businessInfo',query:{businessId:businessId}});
+			toBusinessInfo(businessId) {
+				this.$router.push({
+					path: '/businessInfo',
+					query: {
+						businessId: businessId
+					}
+				});
+			},
+			goback() {
+				this.$router.go(-1);
 			}
 		}
 	}
@@ -109,6 +120,12 @@
 		justify-content: center;
 		align-items: center;
 	}
+
+	.wrapper header .fa-angle-left{
+		margin: 0% 80% 0 0;
+		position: absolute;
+	}
+
 
 	/****************** 商家列表部分 ******************/
 	.wrapper .business {

@@ -3,6 +3,7 @@
 
 		<!-- header部分 -->
 		<header>
+			<div class="fa fa-angle-left" @click="goback()"></div>
 			<p>确认订单</p>
 		</header>
 
@@ -25,14 +26,14 @@
 					<img :src="item.food.foodImg">
 					<p>{{item.food.foodName}} x {{item.quantity}}</p>
 				</div>
-				<p>&#165;{{item.food.foodPrice*item.quantity}}</p>
+				<p>&#165;{{(item.food.foodPrice*item.quantity).toFixed(2)}}</p>
 			</li>
 		</ul>
 		<div class="order-deliveryfee">
 			<p>配送费</p>
 			<p>&#165;{{business.deliveryPrice}}</p>
 		</div>
-
+		
 		<!-- 合计部分 -->
 		<div class="total">
 			<div class="total-left">
@@ -96,6 +97,9 @@
 			}
 		},
 		methods:{
+			goback() {
+				this.$router.go(-1);
+			},
 			toUserAddress(){
 				this.$router.push({path:'/userAddress',query:{businessId:this.businessId}});
 			},
@@ -149,6 +153,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+	
+	.wrapper header .fa-angle-left{
+		margin: 0% 80% 0 0;
+		position: absolute;
 	}
 
 	/****************** 订单信息部分 ******************/

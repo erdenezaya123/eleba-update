@@ -3,6 +3,8 @@
 				
 				<!-- header部分 -->
 				<header>
+					<div class="fa fa-angle-left" @click="goback()"></div>
+					
 					<p>商家信息</p>
 				</header>
 				
@@ -109,6 +111,9 @@
 			});
 		},
 		methods:{
+			goback() {
+				this.$router.go(-1);
+			},
 			listCart(){
 				this.$axios.post('CartController/listCart',this.$qs.stringify({
 					businessId:this.businessId,
@@ -248,21 +253,26 @@
 	}
 	
 	/****************** header部分 ******************/
-	.wrapper header{
+	.wrapper header {
 		width: 100%;
 		height: 12vw;
 		background-color: #0097FF;
 		color: #fff;
 		font-size: 4.8vw;
-		
+
 		position: fixed;
 		left: 0;
 		top: 0;
 		z-index: 1000;
-		
+
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.wrapper header .fa-angle-left{
+		margin: 0% 80% 0 0;
+		position: absolute;
 	}
 	
 	/****************** 商家logo部分 ******************/
