@@ -41,7 +41,7 @@
 			</li>
 		</ul>
 		<div class="payment-button">
-			<button@click="toSuccess()">确认支付</button>
+			<button>确认支付</button>
 		</div>
 
 		<!-- 底部菜单部分 -->

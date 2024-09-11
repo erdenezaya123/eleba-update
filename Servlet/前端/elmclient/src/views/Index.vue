@@ -107,7 +107,7 @@
 
 		<!-- 推荐商家列表部分 -->
 		<ul class="business">
-			<li@click="toBusinessInfo(10001)">
+			<li @click="toBusinessInfo(10001)">
 				<img src="../assets/sj01.png">
 				<div class="business-info">
 					<div class="business-info-h">
