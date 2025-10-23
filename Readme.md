@@ -2,7 +2,7 @@
 
 天津大学《软件工程综合实践》结课报告
 
-<img src="file:///C:/Users/Administrator/AppData/Roaming/marktext/images/2025-10-23-21-05-41-image.png" title="" alt="" data-align="center">
+![输入图片说明](picture/%E5%9B%BE%E7%89%8711.png)
 
 <table>
   <tr>
@@ -212,9 +212,7 @@ T软公司为了站在互联网的风口起飞，决定快速开发一个互联�
 
 ### 2.3.2 类图描述
 
-
-
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-11-06-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8712.png)
 
 图 2-1 上述业务的类图说明
 
@@ -226,7 +224,7 @@ T软公司为了站在互联网的风口起飞，决定快速开发一个互联�
 
 ## 2.4.2 状态图描述
 
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-11-39-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8713.png)
 
 图 2-2 下一个订单的状态图说明
 
@@ -255,7 +253,7 @@ T软公司为了站在互联网的风口起飞，决定快速开发一个互联�
   </tr>
 </table>
 
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-12-11-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8714.png)
 
 图 2-3 宏观用例图
 
@@ -265,7 +263,7 @@ T软公司为了站在互联网的风口起飞，决定快速开发一个互联�
 
 #### 2.5.2.1 普通客户用例分析
 
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-13-08-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8715.png)
 
 </mermaid>
 
@@ -750,8 +748,8 @@ T软公司为了站在互联网的风口起飞，决定快速开发一个互联�
 
 #### 2.5.2.2 商家用例分析
 
-
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-16-03-image.png)图 2-5 商家用例图
+![输入图片说明](picture/%E5%9B%BE%E7%89%8716.png)
+图 2-5 商家用例图
 
 
 
@@ -836,7 +834,7 @@ T软公司为了站在互联网的风口起飞，决定快速开发一个互联�
 
 #### 2.5.2.3 管理员用例分析
 
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-16-43-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8717.png)
 
 图 2-6 平台管理员用例图
 
@@ -893,7 +891,7 @@ T软公司为了站在互联网的风口起飞，决定快速开发一个互联�
 
 ### 2.6.2 用部署图和构件图设计系统技术框架
 
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-17-39-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8718.png)
 
 </mermaid>
 
@@ -1099,7 +1097,7 @@ src/main/java/com/neusoft/elmboot/WebMvcConfig_01.java
 在IDEA环境中编译，有时遇到无法执行目标文档的报错（如图4-1）。解决方法:
 在npm install后面加上--legacy-peer-deps就可以解决问题。
 
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-19-28-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8719.png)
 
 图 4-1
 
@@ -1107,7 +1105,7 @@ src/main/java/com/neusoft/elmboot/WebMvcConfig_01.java
 
 在.vue文件中的methods之间记得格式问题，要用英文逗号隔开。
 
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-19-43-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8720.png)
 
 图 4-2
 
@@ -1120,8 +1118,8 @@ vue版本的不适配问题，在index.js文中，由于初始代码为vue2版�
 测试项目是有时遇到编译，打包正确但无法与前端连接上的问题，检查发现：
 由于前端根目录路由到登陆页面login，从而导致路径请求错误（如图4-3）。应在路由配置文index.js中，对根路径的路由设置为index，而不是login。
 
-
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-20-16-image.png)图 4-3
+![输入图片说明](picture/%E5%9B%BE%E7%89%8721.png)
+图 4-3
 
 
 
@@ -1140,31 +1138,26 @@ vue版本的不适配问题，在index.js文中，由于初始代码为vue2版�
 
 测试工具Apifox
 
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-20-36-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8722.png)
 
 图 4-4
 
-
-
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-20-47-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8723.png)
 
 图 4-5 列出所有商家
 
-
-
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-20-56-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8724.png)
 
 图 4-6 订单状态改为已支付 1
 
 
 
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-21-19-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8725.png)
 
 图 4- 7 成 功 修 改 头 像 并 返 1
 
 
-
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-21-39-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8726.png)
 
 图4-8 自动化测试
 
@@ -1174,7 +1167,7 @@ vue版本的不适配问题，在index.js文中，由于初始代码为vue2版�
 
 在IDEA环境中编译，有时遇到无法执行目标文档的报错，解决方法：
 
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-22-32-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8727.png)
 
 图 4- 9
 
@@ -1274,7 +1267,8 @@ if (cartList == null || cartList.isEmpty()) {
 
 ## 4.2.2 gitee 上传记录
 
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-26-33-image.png)![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-26-24-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8728.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8729.png)
 
 ---
 
@@ -1331,7 +1325,7 @@ elmboot3
 elmclient_final
 elmboot_final
 
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2025-10-23-21-27-55-image.png)
+![输入图片说明](picture/%E5%9B%BE%E7%89%8730.png)
 
 图 5-1 上传过的版本历史图
 
